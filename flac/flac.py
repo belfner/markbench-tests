@@ -31,9 +31,8 @@ if flac_folder_exists() is False:
 EXECUTABLE = "encode-flac.bat"
 ABS_EXECUTABLE_PATH = os.path.join(
     os.path.dirname(os.path.realpath(__file__)), EXECUTABLE)
-command = f'{ABS_EXECUTABLE_PATH}'
 
-command = command.rstrip()
+command = ABS_EXECUTABLE_PATH.rstrip()
 start_time = time.time()
 process = Popen(executable=command, args=[],
                 cwd=os.path.dirname(os.path.realpath(__file__)))
