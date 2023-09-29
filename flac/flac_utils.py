@@ -13,7 +13,7 @@ def flac_folder_exists() -> bool:
     return os.path.isdir(os.path.join(SCRIPT_DIR, FLAC_FOLDER_NAME))
 
 
-def download_flac(url: str) -> str:
+def download_flac(url: str) -> None:
     """Download and extract FLAC, return the path to extracted files"""
     destination = os.path.join(SCRIPT_DIR, FLAC_ZIP_NAME)
     response = requests.get(url, allow_redirects=True, timeout=120)
