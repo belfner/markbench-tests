@@ -11,8 +11,8 @@ def read_current_resolution() -> tuple[str, str]:
     height_pattern = re.compile(r"y_res (\d+);")
     width_pattern = re.compile(r"x_res (\d+);")
     cfg = f"{CONFIG_LOCATION}\\{CONFIG_FILENAME}"
-    height_value = 0
-    width_value = 0
+    height_value = "0"
+    width_value = "0"
     with open(cfg, encoding="utf-8") as file:
         lines = file.readlines()
         for line in lines:
