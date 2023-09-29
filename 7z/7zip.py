@@ -45,8 +45,8 @@ list_of_strings = [x.decode('utf-8').rstrip('\n')
                    for x in iter(process.stdout.readlines())]
 EXIT_CODE = process.wait()
 
-SPEED_PATTERN = '^Avr:\s*([0-9]*)\s.*\|\s*([0-9]*)\s.*$'
-VERSION_PATTERN = '7-Zip \(r\) (.*)\('
+SPEED_PATTERN = r'^Avr:\s*([0-9]*)\s.*\|\s*([0-9]*)\s.*$'
+VERSION_PATTERN = r'7-Zip \(r\) (.*)\('
 
 VERSION = ""
 SPEED_C = ""
