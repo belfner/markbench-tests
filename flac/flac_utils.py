@@ -4,7 +4,7 @@ from zipfile import ZipFile
 
 import requests
 
-FLAC_FOLDER_NAME =  "flac-1.4.3-win"
+FLAC_FOLDER_NAME = "flac-1.4.3-win"
 FLAC_ZIP_NAME = "flac-1.4.3-win.zip"
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 
