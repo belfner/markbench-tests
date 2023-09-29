@@ -58,7 +58,7 @@ class KerasService():
         with open(self.screenshot_path, "rb") as report_file:
             return self._query_service(word, report_file)
 
-    def look_for_word(self, word: str, attempts: int = 1, interval: float = 0.0) -> bool:
+    def look_for_word(self, word: str, attempts: int = 1, interval: float = 0.0) -> bool | None:
         """Takes a screenshot of the monitor and searches for a given word.
         Will look for the word at a given time interval until the specified number
         of attempts is reached.
