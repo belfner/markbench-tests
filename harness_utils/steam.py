@@ -14,7 +14,7 @@ def get_steam_folder_path() -> str:
     """Gets the path to the Steam installation directory from the SteamPath registry key"""
     reg_path = r"Software\Valve\Steam"
     reg_key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, reg_path, 0, winreg.KEY_READ)
-    value, _  = winreg.QueryValueEx(reg_key, "SteamPath")
+    value, _ = winreg.QueryValueEx(reg_key, "SteamPath")
     return value
 
 
@@ -22,7 +22,7 @@ def get_steam_exe_path() -> str:
     """Gets the path to the Steam executable from the SteamExe registry key"""
     reg_path = r"Software\Valve\Steam"
     reg_key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, reg_path, 0, winreg.KEY_READ)
-    value, _  = winreg.QueryValueEx(reg_key, "SteamExe")
+    value, _ = winreg.QueryValueEx(reg_key, "SteamExe")
     return value
 
 
@@ -39,7 +39,7 @@ def get_registry_active_user() -> int:
     """
     reg_path = r"Software\Valve\Steam\ActiveProcess"
     reg_key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, reg_path, 0, winreg.KEY_READ)
-    value, _  = winreg.QueryValueEx(reg_key, "ActiveUser")
+    value, _ = winreg.QueryValueEx(reg_key, "ActiveUser")
     return value
 
 
