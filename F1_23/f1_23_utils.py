@@ -3,15 +3,15 @@ import os
 import re
 
 
-def get_resolution() -> tuple[int, int]:
+def get_resolution() -> tuple[str, str]:
     """Gets resolution width and height from local xml file created by game."""
     username = os.getlogin()
     config_path = f"C:\\Users\\{username}\\Documents\\My Games\\F1 23\\hardwaresettings"
     config_filename = "hardware_settings_config.xml"
     resolution = re.compile(r"<resolution width=\"(\d+)\" height=\"(\d+)\"")
     cfg = f"{config_path}\\{config_filename}"
-    height = 0
-    width = 0
+    height = "0"
+    width = "0"
     with open(cfg, encoding="utf-8") as file:
         lines = file.readlines()
         for line in lines:

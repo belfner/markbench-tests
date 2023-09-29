@@ -2,12 +2,12 @@
 import re
 
 
-def read_resolution(config_path: str) -> tuple[int, int]:
+def read_resolution(config_path: str) -> tuple[str, str]:
     """Gets the resolution from local file"""
     height_pattern = re.compile(r"<ResolutionHeight value=\"(\d+)\"/>")
     width_pattern = re.compile(r"<ResolutionWidth value=\"(\d+)\"/>")
-    width = 0
-    height = 0
+    width = '0'
+    height = '0'
     with open(config_path, encoding="utf-8") as file:
         lines = file.readlines()
         for line in lines:

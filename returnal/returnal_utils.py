@@ -4,12 +4,12 @@ import os
 import re
 
 
-def get_resolution(config_path: str) -> tuple[int, int]:
+def get_resolution(config_path: str) -> tuple[str, str]:
     """Retrieve the resolution from local configuration files."""
     width_pattern = re.compile(r"ResolutionSizeX=(\d+)")
     height_pattern = re.compile(r"ResolutionSizeY=(\d+)")
-    width = 0
-    height = 0
+    width = "0"
+    height = "0"
 
     with open(config_path, encoding="utf-8") as file:
         lines = file.readlines()
