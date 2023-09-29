@@ -23,7 +23,7 @@ flags = [
     # The score file is not updated at the end of a benchmark.
     "-update_score_file_disabled"
 
-    # By default the log file is saved in the user’s
+    # By default, the log file is saved in the user’s
     # temp folder (C:\Users\USER_NAME\AppData\
     # Local\Temp). This option allows to save the log
     # file in Kombustor folder
