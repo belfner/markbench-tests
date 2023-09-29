@@ -38,7 +38,7 @@ def copy_rtss_profile(
 
 
 def start_rtss_process(executable_path: str = DEFAULT_EXECUTABLE_PATH) -> any:
-    """Starts the RTSS process given path the the executable"""
+    """Starts the RTSS process given path the executable"""
     if not os.path.isfile(executable_path):
         raise OSError("RTSS is not installed!")
 
