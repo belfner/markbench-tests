@@ -17,7 +17,7 @@ def write_report_json(log_dir: str, report_name: str, report_json: any) -> None:
         file.write(json.dumps(report_json))
 
 
-def format_resolution(width: int, height: int) -> str:
+def format_resolution(width: int | str, height: int | str) -> str:
     """Given width W and height H, return string in format WxH"""
     return f"{width}x{height}"
 
