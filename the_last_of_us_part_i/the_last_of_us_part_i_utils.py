@@ -19,8 +19,8 @@ def get_windowed_resolution(lines: list[str]):
     width_pattern = re.compile(r"WindowWidth=(\d+)")
     height_pattern = re.compile(r"WindowHeight=(\d+)")
 
-    window_width = 0
-    window_height = 0
+    window_width = "0"
+    window_height = "0"
 
     for line in lines:
         width_match = width_pattern.search(line)
@@ -50,8 +50,8 @@ def get_borderless_resolution(lines: list[str]):
     width_pattern = re.compile(r"BorderlessWidth=(\d+)")
     height_pattern = re.compile(r"BorderlessHeight=(\d+)")
 
-    window_width = 0
-    window_height = 0
+    window_width = "0"
+    window_height = "0"
 
     user32 = ctypes.windll.user32
 
@@ -81,8 +81,8 @@ def get_resolution(config_path: str):
     window_mode_pattern = re.compile(r"WindowMode=(\d)")
 
     window_mode = None
-    window_width = 0
-    window_height = 0
+    window_width = "0"
+    window_height = "0"
 
     with open(config_path, encoding="utf-8") as file:
         window_mode_line = file.readline()
