@@ -56,7 +56,7 @@ avail_tests = [
     "gltessyspherex16",
 ]
 
-INSTALL_DIR = "C:\Program Files\Geeks3D\MSI Kombustor 4 x64"
+INSTALL_DIR = r"C:\Program Files\Geeks3D\MSI Kombustor 4 x64"
 EXECUTABLE = "MSI-Kombustor-x64.exe"
 
 parser = ArgumentParser()
