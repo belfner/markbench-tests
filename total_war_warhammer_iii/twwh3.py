@@ -59,7 +59,7 @@ def skip_logo_screens() -> None:
     time.sleep(0.5)
 
 
-def run_benchmark():
+def run_benchmark() -> tuple[float, float]:
     """Starts the benchmark"""
     start_game()
     setup_start_time = time.time()

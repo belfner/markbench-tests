@@ -14,7 +14,7 @@ def get_args() -> any:
     return parser.parse_args()
 
 
-def get_windowed_resolution(lines: list[str]):
+def get_windowed_resolution(lines: list[str]) -> tuple[str, str]:
     """Get windowed resolution value from local game file"""
     width_pattern = re.compile(r"WindowWidth=(\d+)")
     height_pattern = re.compile(r"WindowHeight=(\d+)")
@@ -35,7 +35,7 @@ def get_windowed_resolution(lines: list[str]):
     return window_height, window_width
 
 
-def get_borderless_resolution(lines: list[str]):
+def get_borderless_resolution(lines: list[str]) -> tuple[str, str]:
     """Get borderless resolution value from local game file
 
     Note:
@@ -72,7 +72,7 @@ def get_borderless_resolution(lines: list[str]):
     return window_height, window_width
 
 
-def get_resolution(config_path: str):
+def get_resolution(config_path: str) -> tuple[str, str]:
     """Gets the resolution by retrieving the active steam user id from
     registry to complete the path to the local config file.
     Then parses the local config file and grabbing values depending on

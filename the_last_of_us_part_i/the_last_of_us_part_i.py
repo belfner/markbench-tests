@@ -58,7 +58,7 @@ def navigate_main_menu() -> None:
     time.sleep(2)
 
 
-def run_benchmark():
+def run_benchmark() -> tuple[float, float]:
     """Starts the benchmark"""
     exec_steam_run_command(STEAM_GAME_ID)
     setup_start_time = time.time()
