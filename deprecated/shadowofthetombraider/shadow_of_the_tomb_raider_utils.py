@@ -16,7 +16,7 @@ def get_reg(name) -> any:
         return None
 
 
-def get_resolution() -> tuple[int]:
+def get_resolution() -> tuple[int, int]:
     """Get resolution from registry"""
     width = get_reg("FullscreenWidth")
     height = get_reg("FullscreenHeight")

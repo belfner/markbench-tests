@@ -84,7 +84,7 @@ def navigate_options_menu() -> None:
     user.keyUp("tab")
 
 
-def run_benchmark() -> tuple[float]:
+def run_benchmark() -> tuple[float, float]:
     """Run the benchmark"""
     logging.info("Removing intro videos")
     remove_files(skippable_videos)

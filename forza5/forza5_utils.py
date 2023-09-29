@@ -2,7 +2,7 @@
 import re
 
 
-def read_resolution(config_path: str) -> tuple[int]:
+def read_resolution(config_path: str) -> tuple[int, int]:
     """Gets the resolution from local file"""
     height_pattern = re.compile(r"<ResolutionHeight value=\"(\d+)\"/>")
     width_pattern = re.compile(r"<ResolutionWidth value=\"(\d+)\"/>")

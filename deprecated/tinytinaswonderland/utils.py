@@ -61,7 +61,7 @@ def try_install_paths(drives) -> str:
     raise ValueError("Cannot find the install path for the game!")
 
 
-def read_resolution() -> tuple[int]:
+def read_resolution() -> tuple[int, int]:
     """Read resolution from local ini file"""
     dest = (
         f"{get_documents_path()}\\My Games\\Tiny Tina's Wonderlands" 

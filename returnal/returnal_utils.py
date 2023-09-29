@@ -4,7 +4,7 @@ import os
 import re
 
 
-def get_resolution(config_path: str) -> tuple[int]:
+def get_resolution(config_path: str) -> tuple[int, int]:
     """Retrieve the resolution from local configuration files."""
     width_pattern = re.compile(r"ResolutionSizeX=(\d+)")
     height_pattern = re.compile(r"ResolutionSizeY=(\d+)")

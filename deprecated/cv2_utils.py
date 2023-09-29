@@ -138,7 +138,7 @@ class ClickType(Enum):
     AUTO_GUI = 3  # uses pyautogui instead of pydirectinput
 
 
-def get_middle_of_rect(top_left_corner, height, width) -> tuple[int]:
+def get_middle_of_rect(top_left_corner, height, width) -> tuple[int, int]:
     """Given x, y coordinates of top left corner of a rectangle and its
     width and height, calculate the coordinates of the center
     """
