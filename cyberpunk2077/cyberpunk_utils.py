@@ -48,14 +48,14 @@ def copy_no_intro_mod() -> None:
     shutil.copy(src_file, destination_file)
 
 
-def read_current_resolution():
+def read_current_resolution() -> str:
     """Get resolution from local game file"""
     app_data = os.getenv("LOCALAPPDATA")
     config_location = f"{app_data}\\CD Projekt Red\\Cyberpunk 2077"
     config_filename = "UserSettings.json"
     resolution_pattern = re.compile(r"\"value\"\: \"(\d+x\d+)\"\,")
     cfg = f"{config_location}\\{config_filename}"
-    resolution = 0
+    resolution = '0'
     with open(cfg, encoding="utf-8") as file:
         lines = file.readlines()
         for line in lines:

@@ -124,7 +124,7 @@ try:
     start_time, endtime = run_benchmark()
     resolution = read_current_resolution()
     report = {
-        "resolution": f"{resolution}",
+        "resolution": resolution,
         "start_time": round((start_time * 1000)),
         "end_time": round((endtime * 1000))
     }
